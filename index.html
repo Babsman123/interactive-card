@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card-page">
+      <section class="card-image">
+        <div class="card-image__front">
+          <div class="card-img">
+            <img src="./images/card-logo.svg" alt="card-logo" />
+          </div>
+
+          <div class="card-image__details">
+            <h2>0000 0000 0000 0000</h2>
+
+            <div class="card-user">
+              <h4>Jane Appleseed</h4>
+              <h4><span class="MM">00</span>/<span class="YY">00</span></h4>
+            </div>
+          </div>
+
+          <div class="card-image__back">
+            <h4>
+              <span class="CVC">000</span>
+            </h4>
+          </div>
+        </div>
+      </section>
+      <section class="card-details">
+        <form action="#" class="card-info">
+          <div class="card-name">
+            <label for="text">CARDHOLDER NAME</label>
+            <input type="text" placeholder="e.g Adelani Babatunde" required />
+            <p>Name cannot be blank</p>
+          </div>
+
+          <div class="card-number">
+            <label for="#">CARD NUMBER</label>
+            <input
+              type="number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+            <p>wrong format, numbers only</p>
+          </div>
+
+          <div class="date">
+            <label for="#">EXP. DATE (MM/YY)</label>
+            <div class="year">
+              <input type="number" placeholder="MM" maxlength="2" />
+              <input type="year" placeholder="YY" />
+            </div>
+            <p>Can't be blank</p>
+          </div>
+
+          <div class="num">
+            <label for="#">CVC</label>
+            <input type="text" placeholder="e.g. 123" maxlength="4" />
+            <p>can't be blank</p>
+          </div>
+
+          <div class="btn">
+            <button>Confirm</button>
+          </div>
+        </form>
+
+        <section class="success"></section>
+      </section>
+    </main>
+
+    0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
+    e.g. 123 Confirm
+
+    <!-- Completed state start -->
+
+    Thank you! We've added your card details Continue
+
+    <!-- <input
+      name="somename"
+      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+      type="number"
+      maxlength="2"
+    /> -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
