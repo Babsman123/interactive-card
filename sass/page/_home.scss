@@ -1,0 +1,22 @@
+body {
+  background-color: whitesmoke;
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: top 0rem;
+}
+main {
+  height: 100vh;
+  border: 2px solid green;
+}
+.card-image {
+  .card-image__front {
+    height: 30vh;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 0rem;
+    border-radius: 0.5rem;
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

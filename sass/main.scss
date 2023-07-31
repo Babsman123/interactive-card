@@ -1,12 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "abstract/variables";
+@import "abstract/function";
+@import "abstract/mixin";
 
-body {
-  background-color: whitesmoke;
-  background-image: url(../images/bg-main-mobile.png);
-  background-repeat: no-repeat;
-  background-position: top 0%;
-}
+@import "base/base";
+@import "base/animation";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/card";
+
+@import "grid/grid";
+
+@import "page/home";

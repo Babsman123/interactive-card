@@ -11,7 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>Frontend Mentor | Interactive card details form</title>
 
@@ -27,74 +27,172 @@
     </style>
   </head>
   <body>
-    <main class="card-page">
-      <section class="card-image">
-        <div class="card-image__front">
-          <div class="card-img">
-            <img src="./images/card-logo.svg" alt="card-logo" />
-          </div>
+    <main>
+      <seection class="card-section">
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="card-image">
+              <div class="card-image__front">
+                <div class="card-image__front--img">
+                  <img src="./images/card-logo.svg" alt="card-logo" />
+                </div>
 
-          <div class="card-image__details">
-            <h2>0000 0000 0000 0000</h2>
+                <div class="card-details">
+                  <h4 class="number-card">0000 0000 0000 0000</h4>
 
-            <div class="card-user">
-              <h4>Jane Appleseed</h4>
-              <h4><span class="MM">00</span>/<span class="YY">00</span></h4>
+                  <div class="card-date">
+                    <p>Jane Appleseed</p>
+                    <p>00/00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-image__back">
+                <p>000</p>
+              </div>
             </div>
           </div>
 
-          <div class="card-image__back">
-            <h4>
-              <span class="CVC">000</span>
-            </h4>
+          <div class="col-1-of-2">
+            <form action="#" class="card-info">
+              <div class="card-name">
+                <label for="text">CARDHOLDER NAME</label>
+                <input
+                  type="text"
+                  placeholder="e.g Adelani Babatunde"
+                  required
+                />
+                <p>Name cannot be blank</p>
+              </div>
+
+              <div class="card-number">
+                <label for="#">CARD NUMBER</label>
+                <input
+                  name="somename"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  type="number"
+                  placeholder="e.g 1234 5678 9123 0000"
+                  maxlength="16"
+                  min="0"
+                  class="cardNum"
+                />
+                <p>wrong format, numbers only</p>
+              </div>
+
+              <div class="date">
+                <label for="#">EXP. DATE (MM/YY)</label>
+                <div class="year">
+                  <input
+                    type="number"
+                    placeholder="MM"
+                    min="0"
+                    max="12"
+                    maxlength="2"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    class="month"
+                  />
+                  <input
+                    type="number"
+                    placeholder="YY"
+                    min="1"
+                    maxlength="2"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  />
+                </div>
+                <p>Can't be blank</p>
+              </div>
+
+              <div class="num">
+                <label for="#">CVC</label>
+                <input
+                  type="number"
+                  placeholder="e.g. 123"
+                  min="0"
+                  maxlength="3"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                />
+                <p>can't be blank</p>
+              </div>
+
+              <div class="btn">
+                <button>Confirm</button>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
-      <section class="card-details">
-        <form action="#" class="card-info">
-          <div class="card-name">
-            <label for="text">CARDHOLDER NAME</label>
-            <input type="text" placeholder="e.g Adelani Babatunde" required />
-            <p>Name cannot be blank</p>
-          </div>
-
-          <div class="card-number">
-            <label for="#">CARD NUMBER</label>
-            <input
-              type="number"
-              placeholder="e.g. 1234 5678 9123 0000"
-              required
-            />
-            <p>wrong format, numbers only</p>
-          </div>
-
-          <div class="date">
-            <label for="#">EXP. DATE (MM/YY)</label>
-            <div class="year">
-              <input type="number" placeholder="MM" maxlength="2" />
-              <input type="year" placeholder="YY" />
-            </div>
-            <p>Can't be blank</p>
-          </div>
-
-          <div class="num">
-            <label for="#">CVC</label>
-            <input type="text" placeholder="e.g. 123" maxlength="4" />
-            <p>can't be blank</p>
-          </div>
-
-          <div class="btn">
-            <button>Confirm</button>
-          </div>
-        </form>
-
-        <section class="success"></section>
-      </section>
+      </seection>
     </main>
 
-    0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    <!-- 0000 0000 0000 0000  00/00 000 Cardholder Name e.g. Jane
     Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
-    e.g. 123 Confirm
+    e.g. 123 Confirm -->
+    <!-- 
+    main class="card-page">
+      <div class="row">
+        <section class="card-image">
+          <div class="card-image__front">
+            <div class="card-img">
+              <img src="./images/card-logo.svg" alt="card-logo" />
+            </div>
+
+            <div class="card-image__details">
+              <h2>0000 0000 0000 0000</h2>
+
+              <div class="card-user">
+                <h4>Jane Appleseed</h4>
+                <h4><span class="MM">00</span>/<span class="YY">00</span></h4>
+              </div>
+            </div>
+
+            <div class="card-image__back">
+              <h4>
+                <span class="CVC">000</span>
+              </h4>
+            </div>
+          </div>
+        </section>
+        <section class="card-details col-1-of-2">
+          <form action="#" class="card-info">
+            <div class="card-name">
+              <label for="text">CARDHOLDER NAME</label>
+              <input type="text" placeholder="e.g Adelani Babatunde" required />
+              <p>Name cannot be blank</p>
+            </div>
+
+            <div class="card-number">
+              <label for="#">CARD NUMBER</label>
+              <input
+                type="number"
+                placeholder="e.g. 1234 5678 9123 0000"
+                required
+              />
+              <p>wrong format, numbers only</p>
+            </div>
+
+            <div class="date">
+              <label for="#">EXP. DATE (MM/YY)</label>
+              <div class="year">
+                <input type="number" placeholder="MM" maxlength="2" />
+                <input type="year" placeholder="YY" />
+              </div>
+              <p>Can't be blank</p>
+            </div>
+
+            <div class="num">
+              <label for="#">CVC</label>
+              <input type="text" placeholder="e.g. 123" maxlength="4" />
+              <p>can't be blank</p>
+            </div>
+
+            <div class="btn">
+              <button>Confirm</button>
+            </div>
+          </form>
+
+          <section class="success"></section>
+        </section>
+      </div>
+    </main> -->
 
     <!-- Completed state start -->
 
