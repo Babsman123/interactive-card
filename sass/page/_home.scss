@@ -2,21 +2,31 @@ body {
   background-color: whitesmoke;
   background-image: url(../images/bg-main-desktop.png);
   background-repeat: no-repeat;
-  background-position: top 0rem;
+  background-size: contain;
 }
 main {
   height: 100vh;
-  border: 2px solid green;
+  // border: 2px solid green;
 }
 .card-image {
-  .card-image__front {
-    height: 30vh;
-    width: 80%;
-    margin: 0 auto;
-    margin-left: 0rem;
-    border-radius: 0.5rem;
+  &__front {
     background-image: url(../images/bg-card-front.png);
     background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 1px solid green;
+  }
+  &__back {
+    background-image: url(../images/bg-card-back.png);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    background-image: url(../images/bg-main-mobile.png);
+    background-position: top 0rem;
   }
 }

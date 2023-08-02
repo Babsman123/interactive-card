@@ -1,14 +1,12 @@
 .row {
-  border: 2px solid green;
   max-width: $grid-row;
   margin: 10rem auto;
-  height: 70vh;
 
   @include clearFix;
   .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
     background-color: red;
-    height: 100%;
+    min-height: 70vh;
     float: left;
 
     &:not(:last-child) {
@@ -23,18 +21,25 @@
   height: 100%;
 
   &__front {
+    height: 30vh;
+    width: 80%;
+
+    margin: 0 auto;
+    margin-left: 0rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
 
-    padding: 2rem 3rem;
+    margin-bottom: 5rem;
+  }
+  &__back {
+    min-height: 30vh;
+    width: 80%;
 
-    .card-date {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      border: 2px solid black;
-    }
+    margin: 0 auto;
+    margin-right: 0rem;
+    border-radius: 1rem;
   }
 }
 
@@ -43,4 +48,39 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 5rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-date {
+    display: flex;
+    flex-direction: row;
+
+    .card-form {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid green;
+    }
+    .num {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .row {
+    margin: 5rem auto;
+    .col-1-of-2 {
+      width: 100%;
+      // background-color: red;
+      height: 100%;
+      float: left;
+      margin-bottom: $gutter-horizontal;
+    }
+  }
+  .card-image {
+    flex-direction: column-reverse;
+  }
 }

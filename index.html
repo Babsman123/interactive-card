@@ -32,7 +32,7 @@
         <div class="row">
           <div class="col-1-of-2">
             <div class="card-image">
-              <div class="card-image__front">
+              <div class="card-image__front u-margin-bottom">
                 <div class="card-image__front--img">
                   <img src="./images/card-logo.svg" alt="card-logo" />
                 </div>
@@ -55,7 +55,7 @@
 
           <div class="col-1-of-2">
             <form action="#" class="card-info">
-              <div class="card-name">
+              <div class="card card-name">
                 <label for="text">CARDHOLDER NAME</label>
                 <input
                   type="text"
@@ -65,7 +65,7 @@
                 <p>Name cannot be blank</p>
               </div>
 
-              <div class="card-number">
+              <div class="card card-number">
                 <label for="#">CARD NUMBER</label>
                 <input
                   name="somename"
@@ -79,39 +79,40 @@
                 <p>wrong format, numbers only</p>
               </div>
 
-              <div class="date">
-                <label for="#">EXP. DATE (MM/YY)</label>
-                <div class="year">
-                  <input
-                    type="number"
-                    placeholder="MM"
-                    min="0"
-                    max="12"
-                    maxlength="2"
-                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                    class="month"
-                  />
-                  <input
-                    type="number"
-                    placeholder="YY"
-                    min="1"
-                    maxlength="2"
-                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                  />
+              <div class="card-date">
+                <div class="card-form">
+                  <label for="#">EXP. DATE (MM/YY)</label>
+                  <div class="year">
+                    <input
+                      type="number"
+                      placeholder="MM"
+                      min="0"
+                      max="12"
+                      maxlength="2"
+                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      class="month"
+                    />
+                    <input
+                      type="number"
+                      placeholder="YY"
+                      min="1"
+                      maxlength="2"
+                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    />
+                  </div>
+                  <p>Can't be blank</p>
                 </div>
-                <p>Can't be blank</p>
-              </div>
-
-              <div class="num">
-                <label for="#">CVC</label>
-                <input
-                  type="number"
-                  placeholder="e.g. 123"
-                  min="0"
-                  maxlength="3"
-                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                />
-                <p>can't be blank</p>
+                <div class="num">
+                  <label for="#">CVC</label>
+                  <input
+                    type="number"
+                    placeholder="e.g. 123"
+                    min="0"
+                    maxlength="3"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  />
+                  <p>can't be blank</p>
+                </div>
               </div>
 
               <div class="btn">
