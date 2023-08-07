@@ -1,27 +1,54 @@
 .card-image {
   &__front {
     .card-details {
-      // h4 {
-      //   font-size: 1rem;
-      //   letter-spacing: 0.2rem;
-      //   color: $color-text;
-      //   margin-bottom: 1.5rem;
-      // }
+      h2 {
+        font-size: 3.5rem;
+        letter-spacing: 0.2rem;
+        color: $color-text;
+        margin-bottom: 1.5rem;
+      }
 
-      // .card-date {
-      //   color: $color-text;
-      //   font-size: 1.2rem;
-      // }
+      .card-user {
+        color: $color-text;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
     }
   }
 
   &__back {
     p {
-      // margin: 0 auto;
-      // margin-right: 7rem;
-      // font-size: 1.2rem;
-      // font-weight: bold;
-      color: black;
+      margin: 0 auto;
+      margin-right: 7rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $color-text;
     }
+  }
+}
+
+.card-info {
+  .text-name {
+    color: green;
+    font-weight: bold;
+  }
+  input {
+    height: 5vh;
+    background-color: whitesmoke;
+
+    border: 1px solid $gray-dark;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+
+    cursor: pointer;
+
+    &:active {
+    }
+  }
+  p {
+    display: none;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: $red-input;
   }
 }

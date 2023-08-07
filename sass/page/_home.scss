@@ -9,18 +9,41 @@ main {
   // border: 2px solid green;
 }
 .card-image {
+  position: relative;
   &__front {
-    background-image: url(../images/bg-card-front.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
 
-    border: 1px solid green;
+    margin: 0 auto;
+    margin-left: -3rem;
+    box-shadow: 0 1.5rem 4rem rgba($gray-dark, 0.15);
+    .card-details {
+      position: absolute;
+      top: 0rem;
+      height: 100%;
+      width: 100%;
+
+      &__info {
+        h2 {
+          letter-spacing: 0.4rem;
+        }
+      }
+    }
   }
+
   &__back {
-    background-image: url(../images/bg-card-back.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0 1.5rem 4rem rgba($gray-dark, 0.15);
+
+    margin: 0 auto;
+    margin-right: -3rem;
+    p {
+      position: absolute;
+      top: 0rem;
+
+      padding-right: 6rem;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -28,5 +51,34 @@ main {
   body {
     background-image: url(../images/bg-main-mobile.png);
     background-position: top 0rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .card-image {
+    margin: 2rem 2rem;
+    &__front {
+      width: 90%;
+      border: 2px solid yellow;
+      margin-left: 0rem;
+      img {
+        width: 100%;
+      }
+
+      .card-details {
+        .card-logo {
+          width: 30%;
+        }
+      }
+    }
+    &__back {
+      width: 90%;
+      border: 2px solid yellow;
+      margin-right: 0rem;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }
