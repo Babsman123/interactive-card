@@ -59,8 +59,9 @@ main {
     margin: 2rem 2rem;
     &__front {
       width: 90%;
-      border: 2px solid yellow;
       margin-left: 0rem;
+      margin-top: -7rem;
+      z-index: 1000;
       img {
         width: 100%;
       }
@@ -73,7 +74,6 @@ main {
     }
     &__back {
       width: 90%;
-      border: 2px solid yellow;
       margin-right: 0rem;
 
       img {

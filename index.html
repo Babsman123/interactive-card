@@ -65,7 +65,7 @@
             </div>
           </div>
 
-          <div class="col-1-of-2">
+          <div class="col-1-of-2 flex-wrap">
             <form action="#" class="card-info">
               <div class="card card-name u-margin-bottom-big">
                 <label for="text" class="text-name u-margin-bottom-small"
@@ -131,7 +131,6 @@
                     placeholder="e.g. 123"
                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                     min="0"
-                    max="9"
                     maxlength="3"
                     required
                   />
@@ -142,6 +141,18 @@
                 <button>Confirm</button>
               </div>
             </form>
+
+            <div class="success-page">
+              <div class="success-img u-margin-bottom-big">
+                <img src="./images/icon-complete.svg" alt="success" />
+              </div>
+              <h1 class="u-margin-bottom-big">Thank You</h1>
+              <p class="u-margin-bottom-big">We've added your card details</p>
+
+              <div class="btn">
+                <button>Confirm</button>
+              </div>
+            </div>
           </div>
         </div>
       </seection>
