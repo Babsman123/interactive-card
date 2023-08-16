@@ -53,7 +53,7 @@ submit.addEventListener("click", () => {
   } else if (cardCvc.value === "") {
     errCvc.style.display = "block";
   } else {
-    // cardPage.style.display = "none";
-    success.style.display = "none";
+    cardPage.style.display = "none";
+    success.style.display = "flex";
   }
 });
