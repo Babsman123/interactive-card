@@ -37,10 +37,21 @@ html {
   cursor: pointer; }
 
 .card-info p {
-  display: none;
   margin-top: 0.5rem;
   font-weight: bold;
   color: #ff5252; }
+
+.card-info .error {
+  display: none; }
+
+.card-info .error-num {
+  display: none; }
+
+.card-info .error-mm-yy {
+  display: none; }
+
+.card-info .error-CVC {
+  display: none; }
 
 .success-page h1 {
   color: #21092f;

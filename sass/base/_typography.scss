@@ -46,10 +46,21 @@
     }
   }
   p {
-    display: none;
     margin-top: 0.5rem;
     font-weight: bold;
     color: $red-input;
+  }
+  .error {
+    display: none;
+  }
+  .error-num {
+    display: none;
+  }
+  .error-mm-yy {
+    display: none;
+  }
+  .error-CVC {
+    display: none;
   }
 }
 .success-page {

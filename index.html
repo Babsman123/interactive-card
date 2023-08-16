@@ -45,12 +45,14 @@
                   </div>
 
                   <div class="card-details__info">
-                    <h2>0000 0000 0000 0000</h2>
+                    <h2 class="text-num">0000 0000 0000 0000</h2>
 
                     <div class="card-user">
-                      <h4>Jane Appleseed</h4>
+                      <h4 class="text-name">Jane Appleseed</h4>
                       <h4>
-                        <span class="MM">00</span>/<span class="YY">00</span>
+                        <span class="Month">00</span>/<span class="Year"
+                          >00</span
+                        >
                       </h4>
                     </div>
                   </div>
@@ -60,7 +62,7 @@
               <div class="card-image__back">
                 <img src="./images/bg-card-back.png" alt="" />
 
-                <p>000</p>
+                <p class="CVC">000</p>
               </div>
             </div>
           </div>
@@ -71,8 +73,13 @@
                 <label for="text" class="text-name u-margin-bottom-small"
                   >CARDHOLDER NAME</label
                 >
-                <input type="text" placeholder="e.g Jane Appleseed" required />
-                <p>Name cannot be blank</p>
+                <input
+                  type="text"
+                  class="name-form"
+                  placeholder="e.g Jane Appleseed"
+                  required
+                />
+                <p class="error">Name cannot be blank</p>
               </div>
 
               <div class="card card-number u-margin-bottom-big">
@@ -89,7 +96,7 @@
                   class="cardNum"
                   required
                 />
-                <p>wrong format, numbers only</p>
+                <p class="error-num">wrong format, numbers only</p>
               </div>
               <div class="card-date-cvc u-margin-bottom-big">
                 <div class="date">
@@ -119,7 +126,7 @@
                       required
                     />
                   </div>
-                  <p>Can't be blank</p>
+                  <p class="error-mm-yy">Can't be blank</p>
                 </div>
 
                 <div class="cvc">
@@ -132,13 +139,14 @@
                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                     min="0"
                     maxlength="3"
+                    class="card-cvc"
                     required
                   />
-                  <p>Can't be blank</p>
+                  <p class="error-CVC">Can't be blank</p>
                 </div>
               </div>
               <div class="btn">
-                <button>Confirm</button>
+                <button class="submit">Confirm</button>
               </div>
             </form>
 
@@ -158,88 +166,7 @@
       </seection>
     </main>
 
-    <!-- 0000 0000 0000 0000  00/00 000 Cardholder Name e.g. Jane
-    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
-    e.g. 123 Confirm -->
-    <!-- 
-    main class="card-page">
-      <div class="row">
-        <section class="card-image">
-          <div class="card-image__front">
-            <div class="card-img">
-              <img src="./images/card-logo.svg" alt="card-logo" />
-            </div>
-
-            <div class="card-image__details">
-              <h2>0000 0000 0000 0000</h2>
-
-              <div class="card-user">
-                <h4>Jane Appleseed</h4>
-                <h4><span class="MM">00</span>/<span class="YY">00</span></h4>
-              </div>
-            </div>
-
-            <div class="card-image__back">
-              <h4>
-                <span class="CVC">000</span>
-              </h4>
-            </div>
-          </div>
-        </section>
-        <section class="card-details col-1-of-2">
-          <form action="#" class="card-info">
-            <div class="card-name">
-              <label for="text">CARDHOLDER NAME</label>
-              <input type="text" placeholder="e.g Adelani Babatunde" required />
-              <p>Name cannot be blank</p>
-            </div>
-
-            <div class="card-number">
-              <label for="#">CARD NUMBER</label>
-              <input
-                type="number"
-                placeholder="e.g. 1234 5678 9123 0000"
-                required
-              />
-              <p>wrong format, numbers only</p>
-            </div>
-
-            <div class="date">
-              <label for="#">EXP. DATE (MM/YY)</label>
-              <div class="year">
-                <input type="number" placeholder="MM" maxlength="2" />
-                <input type="year" placeholder="YY" />
-              </div>
-              <p>Can't be blank</p>
-            </div>
-
-            <div class="num">
-              <label for="#">CVC</label>
-              <input type="text" placeholder="e.g. 123" maxlength="4" />
-              <p>can't be blank</p>
-            </div>
-
-            <div class="btn">
-              <button>Confirm</button>
-            </div>
-          </form>
-
-          <section class="success"></section>
-        </section>
-      </div>
-    </main> -->
-
-    <!-- Completed state start -->
-
-    Thank you! We've added your card details Continue
-
-    <!-- <input
-      name="somename"
-      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-      type="number"
-      maxlength="2"
-    /> -->
-
+    <script src="./index.js"></script>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
