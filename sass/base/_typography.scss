@@ -2,7 +2,7 @@
   &__front {
     .card-details {
       h2 {
-        font-size: 3.5rem;
+        font-size: 2.7rem;
         letter-spacing: 0.2rem;
         color: $color-text;
         margin-bottom: 1.5rem;
@@ -28,6 +28,7 @@
 }
 
 .card-info {
+  font-family: "Red Hat Display", sans-serif;
   .text-name {
     color: $button-color;
     font-weight: bold;
@@ -43,6 +44,7 @@
     cursor: pointer;
 
     &:active {
+      border: "none";
     }
   }
   p {

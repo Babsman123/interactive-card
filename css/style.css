@@ -4,10 +4,11 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: "Red Hat Display", sans-serif; }
 
 .card-image__front .card-details h2 {
-  font-size: 3.5rem;
+  font-size: 2.7rem;
   letter-spacing: 0.2rem;
   color: white;
   margin-bottom: 1.5rem; }
@@ -24,35 +25,33 @@ html {
   font-weight: bold;
   color: white; }
 
-.card-info .text-name {
-  color: #21092f;
-  font-weight: bold; }
-
-.card-info input {
-  height: 7vh;
-  background-color: whitesmoke;
-  width: 100%;
-  border: 1px solid #8e8593;
-  border-radius: 0.5rem;
-  padding: 1rem 1rem;
-  cursor: pointer; }
-
-.card-info p {
-  margin-top: 0.5rem;
-  font-weight: bold;
-  color: #ff5252; }
-
-.card-info .error {
-  display: none; }
-
-.card-info .error-num {
-  display: none; }
-
-.card-info .error-mm-yy {
-  display: none; }
-
-.card-info .error-CVC {
-  display: none; }
+.card-info {
+  font-family: "Red Hat Display", sans-serif; }
+  .card-info .text-name {
+    color: #21092f;
+    font-weight: bold; }
+  .card-info input {
+    height: 7vh;
+    background-color: whitesmoke;
+    width: 100%;
+    border: 1px solid #8e8593;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+    cursor: pointer; }
+    .card-info input:active {
+      border: "none"; }
+  .card-info p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #ff5252; }
+  .card-info .error {
+    display: none; }
+  .card-info .error-num {
+    display: none; }
+  .card-info .error-mm-yy {
+    display: none; }
+  .card-info .error-CVC {
+    display: none; }
 
 .success-page h1 {
   color: #21092f;
@@ -96,7 +95,8 @@ html {
     color: white;
     font-weight: bold;
     border-radius: 0.5rem;
-    border: none; }
+    border: none;
+    font-family: "Red Hat Display", sans-serif; }
 
 .row {
   max-width: 100rem;

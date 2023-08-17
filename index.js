@@ -22,6 +22,7 @@ const errCvc = document.querySelector(".error-CVC");
 const success = document.querySelector(".success-page");
 
 // Dismiss page
+const Dismiss = document.querySelector(".confirm");
 
 //to show input on card
 cardName.oninput = () => {
@@ -58,4 +59,9 @@ submit.addEventListener("click", () => {
     cardPage.style.display = "none";
     success.style.display = "flex";
   }
+});
+
+Dismiss.addEventListener("click", () => {
+  success.style.display = "none";
+  cardPage.style.display = "flex";
 });
