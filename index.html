@@ -70,39 +70,35 @@
           <div class="col-1-of-2 flex-wrap">
             <form action="#" class="card-info">
               <div class="card card-name u-margin-bottom-big">
-                <label for="text" class="text-name u-margin-bottom-small"
-                  >CARDHOLDER NAME</label
-                >
+                <h4 class="text-name u-margin-bottom-small">CARDHOLDER NAME</h4>
                 <input
                   type="text"
+                  placeholder="jane Appleseed"
                   class="name-form"
-                  placeholder="e.g Jane Appleseed"
                   required
                 />
-                <p class="error">Name cannot be blank</p>
+                <p class="error">name cannot be blank</p>
               </div>
 
               <div class="card card-number u-margin-bottom-big">
-                <label for="#" class="text-name u-margin-bottom-small"
-                  >CARD NUMBER</label
-                >
+                <h4 class="text-name u-margin-bottom-small">CARD NUMBER</h4>
                 <input
-                  name="somename"
-                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                   type="number"
                   placeholder="e.g 1234 5678 9123 0000"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  class="cardNum"
                   maxlength="16"
                   min="0"
-                  class="cardNum"
                   required
                 />
                 <p class="error-num">wrong format, numbers only</p>
               </div>
+
               <div class="card-date-cvc u-margin-bottom-big">
-                <div class="date">
-                  <label for="#" class="text-name u-margin-bottom-small"
-                    >EXP. DATE (MM/YY)</label
-                  >
+                <div class="card-date">
+                  <h4 class="text-name u-margin-bottom-small">
+                    EXP. DATE (MM/YY)
+                  </h4>
                   <div class="year-month">
                     <input
                       type="number"
@@ -130,9 +126,8 @@
                 </div>
 
                 <div class="cvc">
-                  <label for="#" class="text-name u-margin-bottom-small"
-                    >CVC</label
-                  >
+                  <h4 class="text-name u-margin-bottom-small">CVC</h4>
+
                   <input
                     type="number"
                     placeholder="e.g. 123"
@@ -145,6 +140,7 @@
                   <p class="error-CVC">Can't be blank</p>
                 </div>
               </div>
+
               <div class="btn">
                 <button class="submit">Confirm</button>
               </div>

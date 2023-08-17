@@ -21,6 +21,8 @@ const errCvc = document.querySelector(".error-CVC");
 // Success page display
 const success = document.querySelector(".success-page");
 
+// Dismiss page
+
 //to show input on card
 cardName.oninput = () => {
   text.innerHTML = cardName.value;
@@ -45,9 +47,9 @@ cardCvc.oninput = () => {
 //FORM FILLING
 submit.addEventListener("click", () => {
   if (cardName.value === "") {
-    errName.style.display = "inline-block";
-  } else if (cardNum.value === "" || cardNum.value === typeof string) {
-    errNum.style.display = "inline-block";
+    errName.style.display = "block";
+  } else if (cardNum.value === "" || typeof cardNum.value == "String") {
+    errNum.style.display = "block";
   } else if (cardMonth.value === "" || cardYear.value === "") {
     errMMYY.style.display = "block";
   } else if (cardCvc.value === "") {
