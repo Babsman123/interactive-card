@@ -47,6 +47,14 @@ main {
   }
 }
 
+.slide--in__front {
+  animation: moveInLeft 2s ease-in-out;
+}
+
+.slide--in__back {
+  animation: moveInRight 2s ease-in-out;
+}
+
 @media (max-width: 425px) {
   body {
     background-image: url(../images/bg-main-mobile.png);

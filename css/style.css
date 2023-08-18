@@ -7,6 +7,30 @@ html {
   font-size: 62.5%;
   font-family: "Red Hat Display", sans-serif; }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0rem); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0rem); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0rem); } }
+
 .card-image__front .card-details h2 {
   font-size: 2.7rem;
   letter-spacing: 0.2rem;
@@ -37,9 +61,14 @@ html {
     border: 1px solid #8e8593;
     border-radius: 0.5rem;
     padding: 1rem 1rem;
-    cursor: pointer; }
-    .card-info input:active {
-      border: "none"; }
+    cursor: pointer;
+    backface-visibility: hidden; }
+    .card-info input:focus {
+      outline: none !important;
+      border: 2px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to right, #6448fe, #600594);
+      border-radius: 3rem; }
   .card-info p {
     margin-top: 0.5rem;
     font-weight: bold;
@@ -97,6 +126,9 @@ html {
     border-radius: 0.5rem;
     border: none;
     font-family: "Red Hat Display", sans-serif; }
+
+.btn--animation {
+  animation: moveInBottom 2s ease-in-out; }
 
 .row {
   max-width: 100rem;
@@ -224,6 +256,12 @@ main {
       padding-right: 6rem;
       height: 100%;
       width: 100%; }
+
+.slide--in__front {
+  animation: moveInLeft 2s ease-in-out; }
+
+.slide--in__back {
+  animation: moveInRight 2s ease-in-out; }
 
 @media (max-width: 425px) {
   body {

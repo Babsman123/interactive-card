@@ -42,9 +42,18 @@
     padding: 1rem 1rem;
 
     cursor: pointer;
+    backface-visibility: hidden;
 
-    &:active {
-      border: "none";
+    &:focus {
+      outline: none !important;
+      border: 2px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(
+        to right,
+        $border-start,
+        $border-end
+      );
+      border-radius: 3rem;
     }
   }
   p {
