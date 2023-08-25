@@ -49,7 +49,7 @@ cardCvc.oninput = () => {
 submit.addEventListener("click", () => {
   if (cardName.value === "") {
     errName.style.display = "block";
-  } else if (cardNum.value === "" || typeof cardNum.value == "String") {
+  } else if (cardNum.value === "") {
     errNum.style.display = "block";
   } else if (cardMonth.value === "" || cardYear.value === "") {
     errMMYY.style.display = "block";
@@ -64,4 +64,9 @@ submit.addEventListener("click", () => {
 Dismiss.addEventListener("click", () => {
   success.style.display = "none";
   cardPage.style.display = "flex";
+  cardName.value = "";
+  cardNum.value = "";
+  cardMonth.value = "";
+  cardYear.value = "";
+  cardCvc.value = "";
 });

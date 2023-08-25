@@ -40,20 +40,20 @@
     border: 1px solid $gray-dark;
     border-radius: 0.5rem;
     padding: 1rem 1rem;
+    font-size: 1.5rem;
 
     cursor: pointer;
     backface-visibility: hidden;
 
     &:focus {
       outline: none !important;
-      border: 2px solid;
+      border: 0.2rem solid;
       border-image-slice: 1;
       border-image-source: linear-gradient(
         to right,
         $border-start,
         $border-end
       );
-      border-radius: 3rem;
     }
   }
   p {

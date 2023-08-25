@@ -61,14 +61,14 @@ html {
     border: 1px solid #8e8593;
     border-radius: 0.5rem;
     padding: 1rem 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     backface-visibility: hidden; }
     .card-info input:focus {
       outline: none !important;
-      border: 2px solid;
+      border: 0.2rem solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient(to right, #6448fe, #600594);
-      border-radius: 3rem; }
+      border-image-source: linear-gradient(to right, #6448fe, #600594); }
   .card-info p {
     margin-top: 0.5rem;
     font-weight: bold;
